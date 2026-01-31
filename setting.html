@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings – Darsh Mohamed</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #222;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    /* Header Navigation */
+    header {
+      background-color: rgba(128, 128, 128, 0.95); /* رمادي */
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+
+    nav a.active {
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+
+    body.dark header {
+      background-color: #333;
+    }
+
+    body.dark nav a {
+      color: #eee;
+    }
+
+    /* Settings Container */
+    .settings-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    body.dark .settings-container {
+      background: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+    }
+
+    .settings-container h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #555;
+    }
+
+    .setting {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    select, input[type="checkbox"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .toggle-btn {
+      background-color: #555;
+       background: url('photo/WhatsApp Image 2026-01-30 at 11.50.59 PM.jpeg') no-repeat center center fixed;
+      background-size: cover;
+     
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toggle-btn:hover {
+      background-color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f0f0f0;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    body.dark footer {
+      background-color: #1e1e1e;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="settings.html" class="active"><i class="fas fa-cog"></i> Settings</a>
+    </nav>
+  </header>
+
+  <section class="settings-container">
+    <h2><i class="fas fa-cog"></i> Settings</h2>
+
+    <!-- Dark/Light Mode -->
+    <div class="setting">
+      <label><i class="fas fa-adjust"></i> Theme</label>
+      <button class="toggle-btn" onclick="toggleTheme()"><i class="fas fa-moon"></i> Toggle Dark/Light Mode</button>
+    </div>
+
+    <!-- Language -->
+    <div class="setting">
+      <label for="language"><i class="fas fa-language"></i> Language</label>
+      <select id="language" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="tr">Türkçe</option>
+        <option value="zh">中文</option>
+      </select>
+    </div>
+
+    <!-- Font Size -->
+    <div class="setting">
+      <label for="fontsize"><i class="fas fa-text-height"></i> Font Size</label>
+      <select id="fontsize" onchange="changeFontSize()">
+        <option value="16px">Default</option>
+        <option value="18px">Large</option>
+        <option value="20px">Extra Large</option>
+      </select>
+    </div>
+
+    <!-- Animations -->
+    <div class="setting">
+      <label>
+        <input type="checkbox" id="animations" checked onchange="toggleAnimations()">
+        <i class="fas fa-bolt"></i> Enable Animations
+      </label>
+    </div>
+
+    <!-- Privacy -->
+    <div class="setting">
+      <label>
+        <input type="checkbox" id="privacy" checked>
+        <i class="fas fa-shield-alt"></i> Allow Cookies & Save Preferences
+      </label>
+    </div>
+  </section>
+
+  <footer>
+    This website was made by
+    &copy; https://hmztzyadtarq-wq.github.io/CP-tarek/
+  </footer>
+
+
+  <script>
+    // Load theme preference
+    if(localStorage.getItem("theme") === "dark"){
+      document.body.classList.add("dark");
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme","dark");
+      } else {
+        localStorage.setItem("theme","light");
+      }
+    }
+
+    function changeLanguage() {
+      const lang = document.getElementById('language').value;
+      alert("Language changed to: " + lang);
+    }
+
+    function changeFontSize() {
+      const size = document.getElementById('fontsize').value;
+      document.body.style.fontSize = size;
+    }
+
+    function toggleAnimations() {
+      const enabled = document.getElementById('animations').checked;
+      if (!enabled) {
+        document.querySelectorAll('*').forEach(el => el.style.transition = 'none');
+      } else {
+        document.querySelectorAll('*').forEach(el => el.style.transition = '');
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+

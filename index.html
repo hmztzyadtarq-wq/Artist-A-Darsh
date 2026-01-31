@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darsh Mohamed – Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    /* Header Navigation */
+    header {
+      background-color: rgba(128, 128, 128, 0.9);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+
+    nav a.active {
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+
+    /* Hero Section with fixed background */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('photo/WhatsApp Image 2026-01-30 at 11.50.59 PM.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+    }
+
+    .circle-portrait {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      animation: rotate 12s linear infinite;
+      border: 5px solid #fff;
+    }
+
+    .circle-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hero h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #ddd;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #333;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .circle-portrait {
+        width: 140px;
+        height: 140px;
+      }
+      .hero-overlay {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="circle-portrait">
+        <img src="photo/WhatsApp Image 2026-01-31 at 12.40.28 AM.jpeg" alt="Darsh Mohamed Portrait" />
+      </div>
+      <h1>Welcome to Artist: A-Darsh</h1>
+      <p>Welcome to the art exhibition of the painter Ahmed Mostafa.</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <!-- 60 صور بدون عناوين -->
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.59 PM (4).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.45 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.46 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.47 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.48 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.48 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.48 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.49 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.49 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.49 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.50 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.50 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.51 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.51 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.51 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.51 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.52 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.52 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.54 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.54 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.54 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.54 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.55 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.55 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.55 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.55 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.56 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.56 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.56 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.57 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.57 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.57 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.57 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.58 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.58 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.58 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.58 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.59 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.59 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.59 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.59 PM (4).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.59 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.00 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.00 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.01 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.01 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.01 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.02 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.50.54 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.06 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.06 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.04 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.03 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.03 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.03 PM (2).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.03 PM (1).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.02 PM.jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.02 PM (4).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.02 PM (3).jpeg" alt="" />
+    <img src="photo/WhatsApp Image 2026-01-30 at 11.51.02 PM (2).jpeg" alt="" />
+  </section>
+
+  <footer>
+    &copy; https://hmztzyadtarq-wq.github.io/CP-tarek/
+     
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
